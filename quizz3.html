@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Quiz</title>
+	<link rel ="stylesheet" type="text/css" href="quizz.css">
+    </head>
+    <body>
+     <h1>"personality development Quiz"</h1>
+     
+     <form id="quiz" name="quiz">
+        
+     <p>will you do excercise daily?</p>
+     <input type="radio" id="mc" name="question1" value="yes">yes<br>
+     <input type="radio" id="mc" name="question1" value="no">no<br>
+	 <input type="radio" id="mc" name="question1" value="little bit">little bit<br>
+     
+	 <input id="button" type="button" value="I'm done with question!" onclick="check();">
+	 <div id="after_submit"></div>
+     <p id="mes1"></p>
+     <p id="messages1"></p>
+     <p id="number_correct"></p>
+    
+     
+     <p>if one of your family member went out of the country with out telling anyone.at that time what is your situation?</p>
+     <input type="radio" id="mc" name="question2" value="angar">anger<br>
+     <input type="radio" id="mc" name="question2" value="fear">fear<br>
+	 <input type="radio" id="mc" name="question2" value="happy">happy<br>
+     <input type="radio" id="mc" name="question2" value="leaving that situation">leaving that situation<br>
+	 <input id="button" type="button" value="I'm done with question!" onclick="check();">
+	 <div id="after_submit"></div>
+     <p id="mes2"></p>
+     <p id="messages2"></p>
+     <p id="number_correct"></p>
+    
+     
+     <p>if some baba came to your town and told that one of your town member will die?</p>
+     <input type="radio" id="mc" name="question3" value="i will die">i will die<br>
+     <input type="radio" id="mc" name="question3" value="i will not die">i will not die<br>
+     
+     <input type="radio" id="mc" name="question3" value="none">none<br>
+	 <input id="button" type="button" value="I'm done with question!" onclick="check();">
+	 <div id="after_submit"></div>
+     <p id="mes3"></p>
+     <p id="messages3"></p>
+     <p id="number_correct"></p>
+    
+     <p>do you like your self?</p>
+     <input type="radio" id="mc" name="question4" value="yes">yes<br>
+     <input type="radio" id="mc" name="question4" value="no">no<br>
+     <input type="radio" id="mc" name="question4" value="somewhat">some what<br>
+	 <input id="button" type="button" value="I'm done with question!" onclick="check();">
+	 <div id="after_submit"></div>
+     <p id="mes4"></p>
+     <p id="messages4"></p>
+     <p id="number_correct"></p>
+     
+	 <p>do you prepared to change your self?</p>
+     <input type="radio" id="mc" name="question5" value="yes">yes<br>
+     <input type="radio" id="mc" name="question5" value="no">no<br>
+     <input type="radio" id="mc" name="question5" value="somewhat">some what<br>
+	 
+    
+     <input id="button" type="button" value="I'm done with question!" onclick="check();">
+	 <div id="after_submit"></div>
+     <p id="mes5"></p>
+     <p id="messages5"></p>
+     <p id="number_correct"></p>
+     
+     
+     </form>
+     
+     
+     <script>
+	 function check(){
+  
+var question1=document.quiz.question1.value;
+var question2=document.quiz.question2.value;
+var question3=document.quiz.question3.value;
+var question4=document.quiz.question4.value;
+var question5=document.quiz.question5.value;
+var result="click here";
+var re=result.link("https://www.w3schools.com");
+var re14=result.link("basicex.html");
+var re13=result.link("mediumex.html");
+var re21=result.link("anger.html");
+var re22=result.link("fear.html");
+var re24=result.link("caring.html");
+var re32=result.link("posi.html");
+var re31=result.link("neg.html");
+var re41=result.link("love.html");
+var re42=result.link("slove.html");
+//var correct=0;
+
+
+    if (question1=="yes"){
+	document.getElementById("mes1").innerHTML=" ";
+	
+        document.getElementById("messages1").innerHTML="you are very good at health.";
+  }
+   if(question1=="no")
+   {
+   //document.getElementById("after_submit").style.visibility="visible";
+
+//alert("you need to excerice please click the link");
+
+document.getElementById("mes1").innerHTML="please do basic excercise.";
+    document.getElementById("messages1").innerHTML=re14;
+//document.getElementById("number_correct").innerHTML="&rarr;you got "+correct+" correct.";
+   }
+   if(question1=="little bit")
+   {
+   //alert("you need to improve little bit.click the link");
+   document.getElementById("mes1").innerHTML="you need to improve little bit.";
+   document.getElementById("messages1").innerHTML=re13;
+   }
+ 
+  if (question2=="angar"){
+  //alert("you have very much anger.please to some practice to decrese it click the link");
+  document.getElementById("mes2").innerHTML="you have very much anger.please to some excersices to decrese it ";
+       document.getElementById("messages2").innerHTML=re21;
+  }  
+  if(question2=="fear")
+  {
+  //alert("you need to control your fear");
+  document.getElementById("mes2").innerHTML="you need to control your fear.";
+  document.getElementById("messages2").innerHTML=re22;
+  }
+  if(question2=="happy")
+  {
+  //alert("you are the happiest person");
+  document.getElementById("mes2").innerHTML=" ";
+  document.getElementById("mes2").innerHTML="you are the happeist person.";
+  //document.getElementById("messages2").innerHTML=re;
+  }
+  if(question2=="leaving that situation")
+  {
+  //alert("please take care of other persons.");
+  document.getElementById("mes2").innerHTML="please take care of other.";
+  document.getElementById("messages2").innerHTML=re24;
+  }
+  if(question3=="i will die")
+  {
+  document.getElementById("mes3").innerHTML="you are thinking very much negative.";
+    document.getElementById("messages3").innerHTML=re31;
+  }
+  if(question3=="i will not die")
+  {
+  document.getElementById("mes3").innerHTML="you are thinking positive.";
+    document.getElementById("messages3").innerHTML=re32;
+  }
+ 
+  if(question3=="none")
+  {
+  //document.getElementById("mes1").innerHTML=" ";
+  document.getElementById("mes3").innerHTML="you don't beleave that";
+    document.getElementById("messages3").innerHTML=" ";
+  }
+
+  if(question4=="yes")
+  {
+  document.getElementById("mes4").innerHTML="keep loving your self";
+    document.getElementById("messages4").innerHTML=" ";
+  }
+  if(question4=="no")
+  {
+  document.getElementById("mes4").innerHTML="please love your self.";
+    document.getElementById("messages4").innerHTML=re41;
+  }
+  if(question4=="somewhat")
+  {
+  document.getElementById("mes4").innerHTML="please love your self more.";
+    document.getElementById("messages4").innerHTML=re42;
+  }
+  if(question5=="yes")
+  {
+  document.getElementById("mes5").innerHTML="keep change your your life.";
+    document.getElementById("messages5").innerHTML=" ";
+  }
+  if(question5=="no")
+  {
+  document.getElementById("mes5").innerHTML="keep changing your life.so that you can enjoy your life";
+    document.getElementById("messages5").innerHTML=" ";
+  }
+  if(question5=="somewhat")
+  {
+  document.getElementById("mes5").innerHTML="please change your life style when ever there is a situation to change.";
+    document.getElementById("messages5").innerHTML=" ";
+  }
+
+
+
+
+}
+
+	 </script>
+     
+     
+    </body>
+</html>
